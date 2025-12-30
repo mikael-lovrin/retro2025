@@ -126,19 +126,18 @@ st.caption("Relatório de Performance Afetiva")
 
 st.markdown("---")
 
-
-# --- 1. KPIs ---
-c1, c2, c3 = st.columns(3)
-with c1:
-    kpi("Decepções Recebidas", "0", "▼ -100% vs 2024", "success")
-    kpi("Decepções Entregues", "1", "⚠️ Incidente Isolado", "warning")
-with c2:
-    # Ajuste: Símbolo de Check (Verificado/Concluído)
-    kpi("Auto-Humilhações", "0", "✔ Recuperação Total", "success")
-    kpi("Recaídas", "Error 500", "⛔ Stack Overflow", "alert")
-with c3:
-    kpi("CAPEX (Por Date)", "R$ 75,00", "Min: R$0 | Max: R$300", "warning")
-    kpi("ROI (Retorno)", "Duvidoso", "Ativo de Alto Risco", "alert")
+# --- 1. KPIs (GRID HTML RESPONSIVO) ---
+# Aqui usamos HTML puro para garantir o Grid 2x3 no celular
+st.markdown(f"""
+<div class="kpi-grid">
+    {kpi_html("Decepções Recebidas", "0", "▼ -100% vs 2024", "success")}
+    {kpi_html("Auto-Humilhações", "0", "✔ Recuperação Total", "success")}
+    {kpi_html("CAPEX (Por Date)", "R$ 75,00", "Min: R$0 | Max: R$300", "warning")}
+    {kpi_html("Decepções Entregues", "1", "⚠️ Incidente Isolado", "warning")}
+    {kpi_html("Recaídas", "Error 500", "⛔ Stack Overflow", "alert")}
+    {kpi_html("ROI (Retorno)", "Duvidoso", "Ativo de Alto Risco", "alert")}
+</div>
+""", unsafe_allow_html=True)
 
 st.caption("Nota: Dados financeiros baseados em estimativas proprietárias (Fonte: vozes da minha cabeça).")
 st.markdown("---")
@@ -257,3 +256,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
