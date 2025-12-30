@@ -124,27 +124,6 @@ def kpi(label, value, sub, status="neutral"):
 st.title("Retrospectiva '25")
 st.caption("Relatório de Performance Afetiva")
 
-# --- ANÁLISE DO ATIVO (VOCÊ) ---
-st.markdown("""
-<div style="background-color: #EBEBE8; padding: 15px; border-radius: 6px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #CAD2C5; font-family: 'Inter', sans-serif;">
-    <div style="display: flex; justify-content: space-between; align-items: center; color: #2F3E46; margin-bottom: 10px;">
-        <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #52796F; font-weight: 600;">Ativo</span><br>
-            <span style="font-size: 1.2rem; font-weight: 700; font-family: 'Playfair Display', serif;">MIKAEL LOVRIN</span>
-        </div>
-        <div style="text-align: right;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #52796F; font-weight: 600;">Market Rating</span><br>
-            <span style="font-size: 1rem; font-weight: 700; color: #2E8B57;">BB+ (Outlook Stable)</span>
-        </div>
-    </div>
-    <div style="font-size: 0.85rem; color: #555; border-top: 1px solid #D5DBDB; padding-top: 10px;">
-        <span><strong>Liquidez:</strong> Baixa</span> &nbsp;|&nbsp;
-        <span><strong>Valuation:</strong> Subvalorizado</span> &nbsp;|&nbsp;
-        <span><strong>Volatilidade:</strong> Sazonal</span>
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
 st.markdown("---")
 
 
@@ -276,4 +255,5 @@ st.markdown("""
 <div style='text-align: center; color: #aaa; font-size: 0.8rem; font-family: Inter;'>
     Design by Mikael Lovrin • Aceitando doações em PIX ou terapia
 </div>
+
 """, unsafe_allow_html=True)
